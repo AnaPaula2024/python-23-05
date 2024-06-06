@@ -15,6 +15,8 @@
 #           ----------------------------------------------------           
 #================================================================
 #entrada
+#casting => paa converter o valor de string para inteiro
+# 5 = int('5')
 # notaUmString = input('Insira a nota 1:')
 # notaUmInteiro = int(notaUmString)
 notaUm = int(input('Insira a nota 1: '))
