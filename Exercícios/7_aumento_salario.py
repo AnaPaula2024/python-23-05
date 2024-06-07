@@ -9,21 +9,24 @@ Descrição   : Faça um programa que receba o salário de um funcionário, calc
                 Salário >= R$ 2000,00 aumento de 10%.
 
 '''
-#============================================================
+#==================================================================================================
 #variaveis
 salario = 0
 salario_aumento = 0
+porcentagem = ''
 #entrada
 salario = float(input('Por favor, insira o seu salário:'))
 #processamento
 if(salario < 1000):
+    porcentagem = '25%'
     salario_aumento = salario * 1.25
-    print(round(salario_aumento))
 elif(salario >= 1000 and salario < 2000): #as duas condições tem que ser verdadeiras
+    porcentagem = '15%'
     salario_aumento = salario * 1.15
-    print(round(salario_aumento))
 elif(salario >=2000):
+    porcentagem = '10%'
     salario_aumento = salario * 1.1
-    print(round(salario_aumento))
+    salario_aumento = round(salario_aumento,2)#função nativa do python para arrendondar os valores o '2' seria duas casas decimais depois.
 #saida
-#============================================================
+print ('O seu salario de', salario, 'sofreu um reajuste de', porcentagem, 'sendo agora no valor de',salario_aumento)
+#==============================================================================================================================================
