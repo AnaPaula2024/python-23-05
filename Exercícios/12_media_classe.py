@@ -17,9 +17,11 @@ Descrição   : Faça um programa que receba duas notas de seis alunos.
 
 aluno = 0 
 qtAlunos = 6
-alunosAprovados = 0
+alunosAprovado = 0
 alunosReprovados = 0
 alunosExame = 0
+somaMedia = 0
+mediaFinal = 0
 
 while aluno < qtAlunos:
     aluno = aluno + 1 # aluno += 1
@@ -31,32 +33,24 @@ while aluno < qtAlunos:
     nota_um = float(input(f'Insira a nota 1 do aluno {aluno}: '))
     nota_dois = float(input(f'Insira a nota 2 do aluno {aluno}:'))
 
-    media = (nota_um + nota_dois) / 2
-    mediaFinal = mediaFinal + media
+    media = (nota_um + nota_dois)/2 # 10 -> 8 -> 5 -> 10 -> 7 -> 8
+    somaMedia = somaMedia + media # 10 -> 18 -> 23 -> 33 -> 40 -> 48
 
-    if media <= 3:
+    if(media <= 3):
         print('Reprovado')
         alunosReprovados += 1  # alunosReprovados = alunos Reprovados + 1
-    elif 4 <= media <= 7:
+    elif(media >= 4 and media <= 7):
         print('Exame')
         alunosExame += 1  # alunosExame = alunos Exame + 1
     else:
         print('Aprovado')
-        alunosAprovados += 1  # alunosAprovados = alunos Aprovados + 1
+        alunosAprovado += 1  # alunosAprovados = alunos Aprovados + 1
 
-print(f'Quantidade de alunos aprovados: {alunosAprovados}')
+mediaFinal = round((somaMedia / qtAlunos),2)
+print(f'Quantidade de alunos aprovados: {mediaFinal}')
+print(f'Quantidade de alunos aprovados: {alunosAprovado}')
 print(f'Quantidade de alunos reprovados: {alunosReprovados}')
 print(f'Quantidade de alunos exame: {alunosExame}')
-
-
-
-
-
-
-
-
-
-
 
 
 # alunos_aprovados = 0
