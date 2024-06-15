@@ -5,37 +5,23 @@ Descrição: Faça um programa que receba dois valores, sendo que o
             contidos nesta sequência.
             (Modulo %. Exemplo: 7%2 = 1)
 '''
+#==========================================================================
+num_A = 0
+num_B = 0
 
-valor_um = 0
-valor_dois = 0
-impar = 0
+num_A = int(input('Insira o valor inicial do seu range: ')) # 5
+num_B = int(input('Insira o valor final do seu range: ')) # 10
 
-valor_um = int(input('Insira o número menor: \n'))
-valor_dois = int(input('Insira o número maior: \n'))
-
-if(valor_um < valor_dois):
-    ('Esses são os números impares entre {valor_um} e {valor_dois}')
-else:
-    print('Erro! Digite um valor menor que o segundo')
-    
-
-for i in range(valor_um):
-    for j in range(valor_dois):
-        if valor_um % valor_dois = 1:
-            print(impar)
-        
-
-     
+# for alguma_coisa in range(5,10):
+for nr_dentro_range in range(num_A,num_B): # 5 -> 6 -> 7 -> 8 -> 9
+   resto = nr_dentro_range % 2 # 0(par) ou 1(impar)
+#    print(f'{nr_dentro_range} % 2 = {resto}')
+   if resto == 1:
+      print(nr_dentro_range)
+#===========================================================================
 
 
-
-
-
-
-
-
-
-#     # Recebendo os valores do usuário
+# Recebendo os valores do usuário
 # primeiro_valor = int(input("Digite o primeiro valor: "))
 # segundo_valor = int(input("Digite o segundo valor (maior que o primeiro): "))
 
