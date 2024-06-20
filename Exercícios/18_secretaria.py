@@ -38,26 +38,26 @@ while True:
     print('4 - Sair')
     opcao =  int(input('Insira a opção desejada:'))
     print('=-'*30)
-    print()
+    # print()
 
     if(opcao == 1):
-        print('=-'*30) 
+        # print('=-'*30) 
         novoAluno = input('Adicione o aluno: ')
         sistema_alunos.append(novoAluno)
         print('Aluno(a)',sistema_alunos, 'inserido com sucesso!')
-        print()
+        # print()
         
     elif (opcao == 2): 
-        print('=-'*30)
+        # print('=-'*30)
         deletar_aluno = input('Remova o aluno: ')
         sistema_alunos.remove(deletar_aluno)
         # print(f'Aluno(a)',deletar_aluno, 'removido com sucesso!')
         # print('Aluno(a) informado não existe no sistema')
-        print('=-'*30)
-        print()
+        # print('=-'*30)
+        # print()
             
     elif (opcao == 3):
-        print('=-'*30)
+        # print('=-'*30)
         print('Alunos no sistema: ')
         print(sistema_alunos)
         # print('Aluno(a) informado não consta no sistema' )
@@ -65,7 +65,7 @@ while True:
         # print()
         
     else:
-        print('=-'*30)
+        # print('=-'*30)
         print('Saindo do sistema...')
         break
             # print('Opção inválida. Tente novamente! \n')
