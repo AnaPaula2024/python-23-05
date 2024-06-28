@@ -1,94 +1,65 @@
 '''
-Autor: Julio Miranda
-Data: 25/06/2024
-Versão: 1.0
-Descrição   : Faça um jogo da velha
-
+Descrição: Faça um Jogo da velha
 '''
-
-matriz_jogo =  [['1', '2', '3'],
-                ['4', '5', '6'],
-                ['7', '8', '9']]
+idosa = [['1','2','3'], ## print(idosa[1][1]]) => '5'
+         ['4','5','6'],
+         ['7','8','9']]
 rodadas = 0
 jogador = 'X'
+
+
+#função mostrar o vencedor
+def mostrar_vencedor(vencedor):#vencedor escopo local da função
+    print('Temos um vencedor', vencedor)
+    return True
+
 while rodadas < 9:
-    posicao = input (f'jogador {jogador} escolha uma posição: ') 
+    posicao = input(f'jogador {jogador} escolha uma posição:')
     posicao_encontrada = False
     for linha in range(3):
         linha_completa = ''
         for coluna in range(3):
-            if posicao == matriz_jogo[linha][coluna]:
-                matriz_jogo[linha][coluna] = jogador
+            if posicao == idosa[linha][coluna]:
+                idosa[linha][coluna] = jogador
                 posicao_encontrada = True
-            linha_completa += ' | ' + matriz_jogo[linha][coluna] + ' | '
-        print(f' {linha_completa}')  
+            linha_completa += idosa[linha][coluna] + ' | ' 
+        print(f' {linha_completa}')
     if posicao_encontrada == True:
         rodadas = rodadas + 1
-    if jogador == 'X':
-        jogador  = 'O'
+        if jogador == 'X':
+            jogador = 'O'
+        else:
+            jogador = 'X'
     else:
-        jogador = 'X'
-else:
-    print("posição não econtrada")
+        print('posicao não encontrada')
 
-
-# def print_tabuleiro(tabuleiro):
-#     """ Função para imprimir o tabuleiro do jogo da velha """
-#     for linha in tabuleiro:
-#         print(" | ".join(linha))
-#         print("-" * 9)
-
-# def verifica_vitoria(tabuleiro, jogador):
-#     """ Função para verificar se um jogador venceu """
-#     # Verifica linhas e colunas
-#     for i in range(3):
-#         if all([tabuleiro[i][j] == jogador for j in range(3)]):
-#             return True
-#         if all([tabuleiro[j][i] == jogador for j in range(3)]):
-#             return True
-
-#     # Verifica diagonais
-#     if all([tabuleiro[i][i] == jogador for i in range(3)]):
-#         return True
-#     if all([tabuleiro[i][2 - i] == jogador for i in range(3)]):
-#         return True
-
-#     return False
-
-# def jogo_da_velha():
-#     """ Função principal para o jogo da velha """
-#     tabuleiro = [[" " for _ in range(3)] for _ in range(3)]
-#     jogadores = ['X', 'O']
-#     jogador_atual = 0
-#     rodada = 0
-
-#     print("Bem-vindo ao Jogo da Velha!")
-#     print_tabuleiro(tabuleiro)
-
-#     while True:
-#         print(f"Jogador {jogadores[jogador_atual]}, é sua vez.")
-#         linha = int(input("Escolha a linha (0, 1, 2): "))
-#         coluna = int(input("Escolha a coluna (0, 1, 2): "))
-
-#         if tabuleiro[linha][coluna] == " ":
-#             tabuleiro[linha][coluna] = jogadores[jogador_atual]
-#             rodada += 1
-#             print_tabuleiro(tabuleiro)
-
-#             # Verifica se houve um vencedor
-#             if verifica_vitoria(tabuleiro, jogadores[jogador_atual]):
-#                 print(f"Parabéns! Jogador {jogadores[jogador_atual]} venceu!")
-#                 break
-
-#             # Verifica se deu empate
-#             if rodada == 9:
-#                 print("Empate!")
-#                 break
-
-#             # Troca para o próximo jogador
-#             jogador_atual = 1 - jogador_atual
-#         else:
-#             print("Posição ocupada. Escolha outra.")
-
-# if __name__ == "__main__":
-#     jogo_da_velha()
+    #verificar se tem vencedor
+    if(idosa[0][0] == idosa[0][1] == idosa[0][2]):#linha 1
+        houve_vencedor = mostrar_vencedor(idosa[0][0])
+        break
+    elif(idosa[1][0] == idosa[1][1] == idosa[1][2]):#linha 2
+        houve_vencedor = mostrar_vencedor(idosa[1][0])
+        break
+    elif(idosa[2][0] == idosa[2][1] == idosa[2][2]):#linha 3
+        houve_vencedor = mostrar_vencedor(idosa[2][0])
+        break
+    elif(idosa[0][0] == idosa[1][0] == idosa[2][0]):#coluna 1
+        houve_vencedor = mostrar_vencedor(idosa[0][0])
+        break
+    elif(idosa[0][1] == idosa[1][1] == idosa[2][1]):#coluna 2
+        houve_vencedor = mostrar_vencedor(idosa[0][1])
+        break
+    elif(idosa[0][2] == idosa[1][2] == idosa[2][2]):#coluna 3
+        houve_vencedor = mostrar_vencedor(idosa[0][2])
+        break
+    elif(idosa[0][0] == idosa[1][1] == idosa[2][2]):#diagonal 1
+        houve_vencedor = mostrar_vencedor(idosa[0][0])
+        break
+    elif(idosa[0][2] == idosa[1][1] == idosa[2][0]):#diagonal 2
+        houve_vencedor = mostrar_vencedor(idosa[0][2])
+        break
+    else:
+        houve_vencedor = False
+#fim while
+if(houve_vencedor == False):
+    print('Ocorreu idosa')
