@@ -4,17 +4,19 @@ Este repositório contém uma coleção de exercícios de Python desenvolvidos n
 
 ## 📂 Estrutura do Repositório
 
-- **`Exe_1-Olá_mundo.py`**: Algoritmo simples que recebe o nome do usuário e exibe uma mensagem de saudação.
-- **`Exe_2-Tipos_dados.py`**: Demonstração e manipulação dos diferentes tipos de dados em Python.
-- **`Exe_3-Operadores_matemáticos.py`**: Exercício envolvendo operações matemáticas básicas.
-- **`Exe_4_if_else.py`**: Introdução ao uso de estruturas condicionais `if` e `else`.
-- **`Exe_5_elif.py`**: Demonstração do uso do `elif` em tomadas de decisão.
-- **`Exe_6_while.py`**: Uso do laço de repetição `while`.
-- **`Exe_7_para.py`**: Exercício com o laço de repetição `for`.
-- **`Exe_8_array.py`**: Manipulação de listas (arrays) em Python.
-- **`Exe_10_matriz_3.py`**: Trabalho com matrizes em Python.
-- **`Exe_11_pandas.py`**: Uso da biblioteca `pandas` para manipulação de dados.
-- **`Exe_12_selenium.py`**: Introdução à automação de testes com `selenium`.
+- **`Exe_1-Olá_mundo.py`**: Algoritmo que solicita o nome do usuário, concatena uma mensagem de saudação e a exibe na tela.
+- **`Exe_2-Tipos_dados.py`**: Demonstração do uso de diferentes tipos de dados em Python (string, int, float) e exibição de seus respectivos tipos com a função type().
+- **`Exe_3-Operadores_matemáticos.py`**: Implementação das quatro operações matemáticas básicas (+, -, *, /) em Python, utilizando variáveis numéricas e exibição dos resultados.
+- **`Exe_4_if_else.py`**: Introdução ao uso de estruturas condicionais if e else, avaliando a nota de um aluno para determinar sua aprovação ou reprovação.
+- **`Exe_5_elif.py`**: Demonstração do uso do elif para classificar a nota do aluno como "Aprovado", "Reprovado" ou "Recuperação".
+- **`Exe_6_while.py`**: Exploração do laço de repetição while, incluindo contagem crescente e decrescente, repetição infinita com break e interação com o usuário.
+- **`Exe_7_para.py`**:  Comparação entre os laços de repetição while e for, demonstrando como iterar sobre um intervalo de valores.
+- **`Exe_8_array.py`**: Manipulação de listas (arrays) em Python, abordando como criar, acessar e modificar elementos.
+- **`Exe_9_Array_2.py`**: Manipulação de listas (arrays) em Python, utilizando os métodos `append()`, `remove()`, `pop()` e `len()` para adicionar, remover e acessar elementos.
+- **`Exe_10-matriz_3.py`**: Estudo de matrizes em Python, demonstrando como criar e acessar arrays dentro de arrays, com exemplos de manipulação e acesso a dados por índices.
+- **`Exe_11-pandas.py`**: Uso da biblioteca `pandas` para manipulação de dados, criando um DataFrame a partir de listas e exportando para um arquivo CSV.
+- **`Exe_12-selenium.py`**: Introdução à automação de testes com `selenium`, realizando a extração de dados de uma tabela em uma página web e exportando-os para um arquivo CSV.
+- **`Alunos_senai.csv`**: Arquivo CSV gerado a partir de um DataFrame contendo informações de alunos, incluindo nome, turno e matrícula. O arquivo foi exportado usando a biblioteca `pandas`.
 
 ## 🔧 Requisitos
 
